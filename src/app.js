@@ -9,6 +9,7 @@ const errorHandler = require('./middlewares/errorHandler');
 const authRoutes = require('./routes/auth');
 const itemsRoutes = require('./routes/items');
 const cartRouter = require("./routes/carts");
+const wishlistRouter = require("./routes/wishlist");
 
 
 const app = express();
@@ -22,6 +23,7 @@ app.use('/api/users', usersRouter);
 app.use('/auth', authRoutes);
 app.use('/api/items', itemsRoutes);
 app.use("/cart", cartRouter);
+app.use("/api/wishlist", wishlistRouter);
 
 
 // health check
